@@ -1,0 +1,8 @@
+[user]
+	name = NirmalDaCoder
+	email = nirmalthanos1978@gmail.com
+[core]
+	editor = nvim
+	autocrlf = input
+[init]
+	defaultBranch = main

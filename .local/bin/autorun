@@ -1,0 +1,26 @@
+#!/bin/sh
+
+run() {
+  if ! pgrep -f "$1" ;
+  then
+    "$@"&
+  fi
+}
+
+exec xrandr -s 1920x1080 -r 165.00 &
+exec xrdb -load "$HOME/.config/X11/Xresources" & 
+exec xset r s 300 -b &
+exec setxkbmap -option ctrl:nocaps &
+exec xautolock -detectsleep -time 10 -locker "/usr/bin/lock" -notify 15 -notifier "notify-send -u critical -t 10000 -- 'Locking screen in 15 seconds'"&
+exec xidlehook --detect-sleep --not-when-fullscreen --not-when-audio --timer 900 "systemctl suspend" - &
+
+run /usr/libexec/polkit-gnome-authentication-agent-1 &
+run playerctld daemon &
+run sxhkd &
+run picom & 
+run unclutter &
+run caffeine &
+run nm-applet &
+run copyq &
+run $(killall volumeicon; sleep 5; volumeicon) &
+

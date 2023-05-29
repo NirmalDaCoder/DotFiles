@@ -1,0 +1,22 @@
+alias ls="exa"
+alias la="exa -la"
+alias ll="exa -l"
+
+alias ..="cd .."
+
+alias rm="rm -i"
+alias cp="cp -i"
+alias mv="mv -i"
+
+alias nv="nvim"
+
+alias grep="grep --color=auto"
+alias egrep="egrep --color=auto"
+alias fgrep="fgrep --color=auto"
+
+alias failed="systemctl --failed"
+alias jctl="sudo journalctl -p 3 -xb"
+
+alias merge="xrdb -merge ~/.Xresources "
+
+alias config='/usr/bin/git --git-dir=$HOME/.local/share/dotfiles --work-tree=$HOME'
