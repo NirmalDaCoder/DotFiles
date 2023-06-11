@@ -4,7 +4,7 @@ export SUDO_EDITOR='nvim'
 export TERMINAL='alacritty'
 export BROWSER='firefox'
 export MANPAGER='nvim +Man!'
-export TERM="xterm-256color"
+export TERM="alacritty"
 
 # ZSH
 export LESSHISTFILE="-"
@@ -30,3 +30,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # UTF-8 support
 export LC_ALL=en_US.UTF-8
+
+# ROCM Support
+export HSA_OVERRIDE_GFX_VERSION=10.3.0
+export ROCM_PATH=/opt/rocm

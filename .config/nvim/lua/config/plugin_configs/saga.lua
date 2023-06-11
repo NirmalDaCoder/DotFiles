@@ -8,6 +8,9 @@ saga.setup({
 		show_file = true,
 		file_formatter = "",
 	},
+	ui = {
+		kind = require("catppuccin.groups.integrations.lsp_saga").custom_kind(),
+	},
 })
 local keymap = vim.keymap.set
 

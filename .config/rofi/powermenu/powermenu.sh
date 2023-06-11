@@ -19,7 +19,7 @@ theme="drop_square"
 dir="$HOME/.config/rofi/powermenu"
 
 
-uptime=$(uptime -p | sed -e 's/up //g')
+uptime=$(uptime -p | sed -e 's/up //g' -e 's/, / /g')
 
 rofi_command="rofi -theme $dir/$theme"
 

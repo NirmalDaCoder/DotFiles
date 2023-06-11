@@ -1,5 +1,5 @@
 configuration {
-	font: "JetBrainsMono Nerd Font 36";
+	font: "JetBrainsMono Nerd Font 72";
 	drun-display-format: "{name}";
 	threads: 0;
 	matching: "fuzzy";

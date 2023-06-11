@@ -20,3 +20,4 @@ alias jctl="sudo journalctl -p 3 -xb"
 alias merge="xrdb -merge ~/.Xresources "
 
 alias config='/usr/bin/git --git-dir=$HOME/.local/share/dotfiles --work-tree=$HOME'
+alias av="source ./venv/bin/activate"

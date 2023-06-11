@@ -32,10 +32,3 @@ vim.opt.termguicolors = true
 
 vim.g.loaded_ruby_provider = 0
 vim.g.loaded_perl_provider = 0
-
--- Neovide
-if vim.g.neovide then
-	vim.o.guifont = "JetBrainsMono Nerd Font:h14"
-	vim.g.neovide_refresh_rate = 165
-	vim.g.neovide_cursor_vfx_mode = "pixiedust"
-end

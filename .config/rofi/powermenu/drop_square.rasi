@@ -16,7 +16,7 @@ configuration {
 	sidebar-mode: 					false;
 }
 
-@import "styles/colors.rasi"
+@import "catppuccin.rasi"
 
 window {
     transparency:                   "real";
@@ -84,7 +84,7 @@ element {
 element-text {
     background-color: 				#00000000;
     text-color:       				inherit;
-	font:							"feather 64";
+	font:							"JetBrains Mono 64";
     expand:                         true;
     horizontal-align:               0.5;
     vertical-align:                 0.5;

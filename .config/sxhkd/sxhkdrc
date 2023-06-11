@@ -1,12 +1,4 @@
-# screenshot
-@Print
-	~/.local/bin/screenshot
-
-shift + @Print
-	~/.local/bin/screenshot select
-
-control + @Print
-	~/.local/bin/screenshot window
+# Media Controll
 
 XF86AudioPrev
 	playerctl previous
@@ -17,19 +9,26 @@ XF86AudioNext
 XF86AudioPlay
 	playerctl play-pause
 
-# X11 xkill
+# XTools
+
 ctrl + alt + @Escape
 	xkill
+
+# Apps
 
 XF86Tools
     pavucontrol
 
-# Standard Apps
 super + Return
 	alacritty
 
 super + b
 	firefox
+
+super + e
+    thunar
+
+# Rofi
 
 super + r
 	rofi -show run
@@ -40,8 +39,19 @@ super + p
 alt + @Tab
     rofi -show window 
 
-super + shift + l
+# Scripts
+
+ctrl + super + shift + l
     ~/.local/bin/lock
 
 super + shift + p 
     ~/.config/rofi/powermenu/powermenu.sh
+
+@Print
+	~/.local/bin/screenshot
+
+shift + @Print
+	~/.local/bin/screenshot select
+
+control + @Print
+	~/.local/bin/screenshot window

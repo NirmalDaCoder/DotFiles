@@ -86,23 +86,30 @@ awful.screen.connect_for_each_screen(function(s)
 		buttons = tasklist_buttons,
 	})
 
-	s.mywibox = awful.wibar({ position = "top", screen = s, border_width = 5 })
+	s.mywibox = awful.wibar({ position = "top", screen = s }) --, border_width = 5 })
 
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
 		{
 			layout = wibox.layout.fixed.horizontal,
+			wibox.widget.imagebox(beautiful.awesome_icon, true),
 			s.mytaglist,
 			s.mypromptbox,
 		},
-		wibox.container.margin(s.mytasklist, 2, 2, 2, 2), -- Middle widget
+		wibox.container.margin(s.mytasklist, 3, 3, 3, 3), -- Middle widget
 		{
 			layout = wibox.layout.fixed.horizontal,
 			spacing = 10,
-			wibox.container.margin(wibox.widget.systray(), 2, 2, 2, 2),
+			wibox.container.margin(wibox.widget.systray(), 3, 3, 3, 3),
 			mydate,
 			mytextclock,
-			wibox.container.margin(mypowerbutton, 3, 3, 3, 3),
+			wibox.container.margin(mypowerbutton, 4, 4, 4, 4),
 		},
+	})
+	s.border = awful.wibar({
+		position = "top",
+		screen = s,
+		bg = beautiful.border_normal,
+		height = dpi(2),
 	})
 end)

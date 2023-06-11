@@ -15,12 +15,14 @@ exec xautolock -detectsleep -time 10 -locker "/usr/bin/lock" -notify 15 -notifie
 exec xidlehook --detect-sleep --not-when-fullscreen --not-when-audio --timer 900 "systemctl suspend" - &
 
 run /usr/libexec/polkit-gnome-authentication-agent-1 &
+run picom --daemon --experimental-backends& 
 run playerctld daemon &
+run thunar --daemon &
 run sxhkd &
-run picom & 
 run unclutter &
 run caffeine &
 run nm-applet &
 run copyq &
+run corectrl --minimize-systray &
 run $(killall volumeicon; sleep 5; volumeicon) &
 

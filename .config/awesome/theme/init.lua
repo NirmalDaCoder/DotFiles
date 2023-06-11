@@ -11,9 +11,9 @@ local themes_path = gfs.get_themes_dir()
 local my_theme_path = gfs.get_configuration_dir() .. "theme/"
 
 -- local theme = require("theme.schemes.default")
-local theme = require("theme.schemes.dracula")
+local theme = require("theme.schemes.catppuccin")
 
-theme.font = "JetBrains Mono 11"
+theme.font = "JetBrains Mono Medium 11"
 
 theme.bg_systray = theme.bg_normal
 
@@ -26,7 +26,7 @@ theme.taglist_squares_sel = theme_assets.taglist_squares_sel(taglist_square_size
 theme.taglist_squares_unsel = theme_assets.taglist_squares_unsel(taglist_square_size, theme.fg_normal)
 
 theme.menu_height = dpi(25)
-theme.menu_width = dpi(150)
+theme.menu_width = dpi(175)
 
 -- Define the image to load
 theme.titlebar_close_button_normal = themes_path .. "default/titlebar/close_normal.png"
@@ -55,7 +55,7 @@ theme.titlebar_maximized_button_focus_inactive = themes_path .. "default/titleba
 theme.titlebar_maximized_button_normal_active = themes_path .. "default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active = themes_path .. "default/titlebar/maximized_focus_active.png"
 
-local wallpaper_number = 5
+local wallpaper_number = 7
 theme.wallpaper = my_theme_path .. "walls/" .. wallpaper_number .. ".png"
 
 theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus, theme.fg_focus)
